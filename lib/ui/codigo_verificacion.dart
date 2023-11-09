@@ -10,11 +10,11 @@ class CodigoConfirmacion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-          children: [
-            crearFondo(context),
-            loginForm(context),
-          ],
-        ));
+      children: [
+        crearFondo(context),
+        loginForm(context),
+      ],
+    ));
   }
 }
 
@@ -25,8 +25,8 @@ Widget loginForm(BuildContext context) {
       children: [
         SafeArea(
             child: Container(
-              height: 200,
-            )),
+          height: 200,
+        )),
         Container(
           width: size.width * 0.85,
           padding: const EdgeInsets.symmetric(vertical: 50),
@@ -44,17 +44,24 @@ Widget loginForm(BuildContext context) {
               ]),
           child: Column(
             children: [
-              Text('Verificacion de cuenta', style:
-              TextStyle(fontSize: 20, color: lightColorScheme.tertiary),),
-              const SizedBox(height: 50,),
+              Text(
+                'Verificacion de cuenta',
+                style:
+                    TextStyle(fontSize: 20, color: lightColorScheme.tertiary),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
               pin(),
-              const SizedBox(height: 50,),
+              const SizedBox(
+                height: 50,
+              ),
               botonIngresar(context)
             ],
           ),
         ),
         Text(
-          'Olvido su contraseña?',
+          'No ha recibido el PIN?',
           style: TextStyle(color: lightColorScheme.tertiary, fontSize: 18),
         )
       ],
@@ -72,14 +79,15 @@ Widget pin() {
               Icons.pin,
               color: lightColorScheme.tertiary,
             ),
-            labelText: 'Ingrese el pin'),
+            labelText: 'Ingrese el PIN'),
       ));
 }
 
 Widget botonIngresar(BuildContext context) {
   return ElevatedButton(
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
     },
     child: Container(
       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15.0),

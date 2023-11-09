@@ -45,7 +45,7 @@ Widget loginForm(BuildContext context) {
           child: Column(
             children: [
               Text(
-                'Iniciar seccion',
+                'Iniciar sesión',
                 style:
                     TextStyle(fontSize: 20, color: lightColorScheme.tertiary),
               ),
@@ -81,7 +81,7 @@ Widget email() {
               Icons.alternate_email,
               color: lightColorScheme.tertiary,
             ),
-            labelText: 'Correo electronico'),
+            labelText: 'Nombre de usuario'),
       ));
 }
 
@@ -89,6 +89,7 @@ class PasswordField extends StatefulWidget {
   @override
   _PasswordFieldState createState() => _PasswordFieldState();
 }
+
 class _PasswordFieldState extends State<PasswordField> {
   bool _hidePassword = true;
 
@@ -106,7 +107,7 @@ class _PasswordFieldState extends State<PasswordField> {
           ),
           labelText: 'Contraseña',
           suffixIcon: IconButton(
-            color:lightColorScheme.tertiary,
+            color: lightColorScheme.tertiary,
             onPressed: () {
               setState(() {
                 _hidePassword = !_hidePassword;
@@ -175,10 +176,6 @@ Widget crearFondo(BuildContext context) {
               height: 10.0,
               width: double.infinity,
             ),
-            Text(
-              'Registrarse',
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            )
           ],
         ),
       )

@@ -10,11 +10,11 @@ class CrearCuenta extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-          children: [
-            crearFondo(context),
-            loginForm(context),
-          ],
-        ));
+      children: [
+        crearFondo(context),
+        loginForm(context),
+      ],
+    ));
   }
 }
 
@@ -25,8 +25,8 @@ Widget loginForm(BuildContext context) {
       children: [
         SafeArea(
             child: Container(
-              height: 200,
-            )),
+          height: 200,
+        )),
         Container(
           width: size.width * 0.85,
           padding: const EdgeInsets.symmetric(vertical: 50),
@@ -44,12 +44,19 @@ Widget loginForm(BuildContext context) {
               ]),
           child: Column(
             children: [
-              Text('Crear cuenta', style:
-              TextStyle(fontSize: 20, color: lightColorScheme.tertiary),),
-              const SizedBox(height: 30,),
+              Text(
+                'Registrarse',
+                style:
+                    TextStyle(fontSize: 20, color: lightColorScheme.tertiary),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
               nombre(),
               email(),
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               PasswordField(),
               const SizedBox(height: 40),
               botonIngresar(context),
@@ -57,7 +64,7 @@ Widget loginForm(BuildContext context) {
           ),
         ),
         Text(
-          'Olvido su contraseña?',
+          'Ya está registrado?',
           style: TextStyle(color: lightColorScheme.tertiary, fontSize: 18),
         )
       ],
@@ -97,6 +104,7 @@ class PasswordField extends StatefulWidget {
   @override
   _PasswordFieldState createState() => _PasswordFieldState();
 }
+
 class _PasswordFieldState extends State<PasswordField> {
   bool _hidePassword = true;
 
@@ -114,7 +122,7 @@ class _PasswordFieldState extends State<PasswordField> {
           ),
           labelText: 'Contraseña',
           suffixIcon: IconButton(
-            color:lightColorScheme.tertiary,
+            color: lightColorScheme.tertiary,
             onPressed: () {
               setState(() {
                 _hidePassword = !_hidePassword;
@@ -133,7 +141,8 @@ class _PasswordFieldState extends State<PasswordField> {
 Widget botonIngresar(BuildContext context) {
   return ElevatedButton(
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => CodigoConfirmacion()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => CodigoConfirmacion()));
     },
     child: Container(
       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15.0),
@@ -182,14 +191,9 @@ Widget crearFondo(BuildContext context) {
               height: 10.0,
               width: double.infinity,
             ),
-            Text(
-              'Nueva cuenta',
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            )
           ],
         ),
       )
     ],
   );
 }
-

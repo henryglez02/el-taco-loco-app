@@ -43,7 +43,8 @@ class Bienvenido extends StatelessWidget {
                     backgroundColor: lightColorScheme.onTertiary,
                     foregroundColor: lightColorScheme.tertiary,
                     minimumSize: const Size(double.infinity, 60)),
-                child: const Text('Iniciar sesion', style: TextStyle(fontSize: 20)),
+                child: const Text('Iniciar sesión',
+                    style: TextStyle(fontSize: 20)),
               ),
             ),
             Container(
@@ -58,7 +59,7 @@ class Bienvenido extends StatelessWidget {
                     foregroundColor: lightColorScheme.tertiary,
                     minimumSize: const Size(double.infinity, 60)),
                 child: const Text(
-                  'Crear cuenta',
+                  'Registrarse',
                   style: TextStyle(fontSize: 20),
                 ),
               ),
